@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.project.Rayhan.LoginController">
+   <children>
+      <Label layoutX="356.0" layoutY="14.0" text="Login">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="166.0" text="User ID" />
+      <Label layoutX="126.0" layoutY="201.0" text="Password" />
+      <TextField fx:id="idTF" layoutX="227.0" layoutY="162.0" />
+      <PasswordField fx:id="passwordPF" layoutX="227.0" layoutY="197.0" />
+      <Button layoutX="276.0" layoutY="272.0" mnemonicParsing="false" onAction="#loginOA" text="Login" />
+      <Button layoutX="544.0" layoutY="272.0" mnemonicParsing="false" onAction="#createAccountOA" text="Create Account" />
+   </children>
+</AnchorPane>
