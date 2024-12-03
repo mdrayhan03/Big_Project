@@ -1,5 +1,7 @@
 package mainpkg.project.Rayhan;
 
+import java.util.Objects;
+
 public class User {
     private String id, name, password, email, pN;
 
@@ -76,11 +78,16 @@ public class User {
             id += this.email.substring(0, 2);
         }
 
+        else if (type == "admin") {
+            id = "admin" ;
+        }
+
         return id ;
     }
 
     public boolean loginVR(String id, String password) {
-        if(this.getId() == id && this.getPassword() == password) {
+        System.out.println(Objects.equals(this.getId(), id) && Objects.equals(this.getPassword(), password));
+        if(Objects.equals(this.getId(), id) && Objects.equals(this.getPassword(), password)) {
             return true ;
         }
         return false ;

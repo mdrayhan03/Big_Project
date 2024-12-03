@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.project.Rayhan.User3.Dashboard">
+   <children>
+      <Label layoutX="213.0" layoutY="20.0" text="Dashboard">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="130.0" text="User Name" />
+      <Label layoutX="45.0" layoutY="163.0" text="User Type" />
+      <Label layoutX="373.0" layoutY="92.0" text="Date" />
+      <Label fx:id="userNameL" layoutX="134.0" layoutY="130.0" text="Label" />
+      <Label fx:id="userTypeL" layoutX="134.0" layoutY="163.0" text="Label" />
+      <Label fx:id="dateL" layoutX="441.0" layoutY="92.0" text="Label" />
+   </children>
+</AnchorPane>
