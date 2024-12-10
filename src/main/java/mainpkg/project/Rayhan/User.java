@@ -1,15 +1,16 @@
 package mainpkg.project.Rayhan;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class User {
-    private String id, name, password, email, pN;
+public class User implements Serializable {
+    private String id, name, password, email, phone;
 
     public User(String name, String password, String email, String pN, String type) {
         this.name = name;
         this.password = password;
         this.email = email;
-        this.pN = pN;
+        this.phone = pN;
         this.id = this.generateID(type) ;
     }
 
@@ -45,12 +46,12 @@ public class User {
         this.email = email;
     }
 
-    public String getpN() {
-        return pN;
+    public String getphone() {
+        return phone;
     }
 
-    public void setpN(String pN) {
-        this.pN = pN;
+    public void setphone(String pN) {
+        this.phone = pN;
     }
 
     @Override
@@ -60,7 +61,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", pN='" + pN + '\'' +
+                ", pN='" + phone + '\'' +
                 '}';
     }
 
@@ -70,11 +71,11 @@ public class User {
         if (type == "Student") {
             id += this.name.substring(0, 3);
             id += this.email.substring(0, 3);
-            id += this.pN.substring(this.getpN().length());
+            id += this.phone.substring(this.getphone().length());
         }
 
         else if (type == "Faculty") {
-            id += this.pN.substring(0, 2);
+            id += this.phone.substring(0, 2);
             id += this.email.substring(0, 2);
         }
 

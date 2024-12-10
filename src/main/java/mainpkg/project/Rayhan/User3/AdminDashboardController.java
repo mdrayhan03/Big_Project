@@ -38,11 +38,21 @@ public class AdminDashboardController
     }
 
     @javafx.fxml.FXML
-    public void createCourseOA(ActionEvent actionEvent) {
+    public void createCourseOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/project/Rayhan/User3/AddCourse.fxml"));
+        Node node = fxmlLoader.load() ;
+        AddCourseController acc = fxmlLoader.getController() ;
+        acc.setter(user);
+        adminDashboardBP.setCenter(node);
     }
 
     @javafx.fxml.FXML
-    public void addFacultyOA(ActionEvent actionEvent) {
+    public void addFacultyOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/project/Rayhan/User3/AddFaculty.fxml"));
+        Node node = fxmlLoader.load() ;
+        AddFacultyController afc = fxmlLoader.getController() ;
+        afc.setter(user);
+        adminDashboardBP.setCenter(node);
     }
 
     @javafx.fxml.FXML
